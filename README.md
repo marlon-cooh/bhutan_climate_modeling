@@ -1,6 +1,14 @@
-# Bhutan Climate Analysis
 
-This repository contains data, code, and outputs for analyzing historical climate patterns across Bhutan. The goal is to identify seasonal trends and support predictive modeling of extreme weather events using meteorological data.
+# Bhutan Climate Modeling
+
+🌏 This repository is part of [Omdena's local chapter challenge](https://www.omdena.com/chapter-challenges/leveraging-ai-to-combat-climate-change-in-bhutan), focused on leveraging AI to combat climate change in Bhutan.
+
+We aim to model climate patterns and predict extreme events such as glacial lake outburst floods (GLOFs) through collaborative, data-driven analysis.
+
+This repo includes data, code, and outputs for:
+- Analyzing historical meteorological patterns across Bhutan
+- Identifying seasonal and regional climate trends
+- Supporting predictive modeling of extreme weather events
 
 
 ## 📁 Repository Structure
