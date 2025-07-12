@@ -42,20 +42,19 @@ This repo includes data, code, and outputs for:
 - **Region:** Bhutan bounding box
 - **Temporal range:** 1979 to latest year
 - **Tools:** `cdsapi`, structured folder organization (by variable/year)
-- **Extras:** Track download duration for performance monitoring
 
-####  Other Potential Data Sources
+####  Other Explored Data Sources
 - Local MET data (RH, Tmax, Tmin, Rainfall)
+- GLOF/flood event history 
 - River discharge or lake level data (if available)
 - DEM/topographic data (elevation, slope)
 - Land cover and infrastructure exposure
-- GLOF/flood event history 
+
 
 ---
 
 ### 2. Data Preprocessing & Daily Aggregation
 **Goal:** Convert hourly data into daily metrics  
-**Status:** Partially completed
 
 - **Daily aggregations:**
   - Sum: `Total_precipitation`, `Snowmelt`
@@ -69,7 +68,6 @@ This repo includes data, code, and outputs for:
 
 ### 3. ML / DL Modeling
 **Goal:** Predict flood or extreme rainfall risk  
-**Status:** In development
 
 #### 🧩 Feature Engineering
 - Lagged variables (1, 3, 7, 14, 30 days)
@@ -97,7 +95,6 @@ This repo includes data, code, and outputs for:
 
 ### 4. Deployment (Next step)
 **Goal:** Build a usable predictive tool  
-**Status:** Not started
 
 - Options:
   - Backend: Flask / FastAPI
