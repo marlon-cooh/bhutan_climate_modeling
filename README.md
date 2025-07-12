@@ -19,16 +19,96 @@ This repo includes data, code, and outputs for:
 - Identifying seasonal and regional climate trends
 - Supporting predictive modeling of extreme weather events
 
-## 🧠 Modeling Directions
 
-We are actively developing predictive models using the following approaches:
+## Project Roadmap
 
-- **Feature engineering** using lagged and rolling weather indicators (e.g., rainfall, Tmax, Tmin, RH)  
-- **Short-term precipitation forecasting** using models like XGBoost and SARIMAX  
-- **Extreme flood risk prediction** incorporating river discharge proxies and glacial lake data  
-- Future directions include:  
-  - Spatial modeling with **graph neural networks (GNNs)**  
-  - Event detection using **transformers and deep learning**  
+### 1. Data Collection
+**Goal:** Fetch and organize relevant data from multiple sources  
+**Status:** In progress
+
+####  ERA5 Hourly Reanalysis (Main Source)
+- **Variables:**  
+  - `Total_precipitation`  
+  - `2m_temperature`  
+  - `2m_dewpoint_temperature`  
+  - `10m_u_component_of_wind`  
+  - `10m_v_component_of_wind`  
+  - `surface_solar_radiation_downwards`  
+  - `potential_evaporation`  
+  - `snow_depth`  
+  - `Snowmelt`  
+  - `Soil temperature level 1`  
+  - `Relative_humidity`
+- **Region:** Bhutan bounding box
+- **Temporal range:** 1979 to latest year
+- **Tools:** `cdsapi`, structured folder organization (by variable/year)
+- **Extras:** Track download duration for performance monitoring
+
+####  Other Potential Data Sources
+- Local MET data (RH, Tmax, Tmin, Rainfall)
+- River discharge or lake level data (if available)
+- DEM/topographic data (elevation, slope)
+- Land cover and infrastructure exposure
+- GLOF/flood event history 
+
+---
+
+### 2. Data Preprocessing & Daily Aggregation
+**Goal:** Convert hourly data into daily metrics  
+**Status:** Partially completed
+
+- **Daily aggregations:**
+  - Sum: `Total_precipitation`, `Snowmelt`
+  - Mean: `2m_temperature`, `2m_dewpoint_temperature`, `RH`
+  - Max/min: computed for `Tmax`/`Tmin` from hourly temps
+- Use `xarray`/`pandas` to resample
+- Handle missing values
+- Save in `.nc` or `.pkl` formats, organized by region and variable
+
+---
+
+### 3. ML / DL Modeling
+**Goal:** Predict flood or extreme rainfall risk  
+**Status:** In development
+
+#### 🧩 Feature Engineering
+- Lagged variables (1, 3, 7, 14, 30 days)
+- Rolling stats (3, 7, 14, 30 days)
+- Temporal features: `dayofyear`, monsoon flag
+- (Optional) Spatial features: elevation, lake/river proximity
+
+#### 🧠 Model Development
+- Binary classification (e.g., extreme rainfall event)  
+- Regression (e.g., total daily rainfall)
+- **Algorithms:**
+  - ML: XGBoost, RandomForest, Logistic Regression
+  - DL: CNN-LSTM, Transformers
+  - (Optional): GNN for spatiotemporal modeling across regions
+
+#### ✅ Evaluation
+- Train/test split by time
+- Metrics:
+  - Classification: Accuracy, F1-score, Confusion Matrix
+  - Regression: RMSE, MAE
+- Cross-validation or time series split
+- Visualizations: prediction vs actual plots
+
+---
+
+### 4. Deployment (Next step)
+**Goal:** Build a usable predictive tool  
+**Status:** Not started
+
+- Options:
+  - Backend: Flask / FastAPI
+  - Frontend: Streamlit / Gradio interface
+  - Daily scheduled inference
+- Stretch goals:
+  - Interactive dashboard (Plotly, Dash)
+  - Risk alerts for high-probability days
+
+---
+
 
 ## 📁 Repository Structure
 
