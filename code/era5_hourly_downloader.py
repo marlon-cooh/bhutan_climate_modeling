@@ -4,7 +4,7 @@ import time
 
 def download_era5_hourly_variable(variable_name,
                                    years,
-                                   base_data_dir='../era5_data',  # <- points outside 'code'
+                                   base_data_dir='../era5_data', 
                                    area=[28.5, 88.5, 26.5, 92.0]):
     """
     Download hourly ERA5 data for a single variable over Bhutan for specified years.
