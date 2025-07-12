@@ -1,30 +1,18 @@
 
-# Bhutan Climate Modeling
+# 🌏 Bhutan Climate Modeling
 
-🌏 This repository is part of [Omdena's local chapter challenge](https://www.omdena.com/chapter-challenges/leveraging-ai-to-combat-climate-change-in-bhutan), focused on leveraging AI to combat climate change in Bhutan.
-
-We aim to model climate patterns and predict extreme events such as glacial lake outburst floods (GLOFs) through collaborative, data-driven analysis.
+This repository is part of [Omdena's local chapter challenge](https://www.omdena.com/chapter-challenges/leveraging-ai-to-combat-climate-change-in-bhutan), focused on leveraging AI to combat climate change in Bhutan.
 
 ## ✅ Project Goals
 
-- Understand historical meteorological trends and seasonal patterns  
-- Identify regions vulnerable to extreme climate events  
-- Build predictive models using AI/ML to forecast floods and extreme weather events  
-- Explore the use of **ERA5 reanalysis data** for high-resolution temporal modeling  
-- Investigate potential for **river and lake metrics** to serve as proxies for flood risk  
+- Understand historical meteorological trends and seasonal/regional patterns  
+- Build and validate predictive models to forecast floods and extreme weather events such as glacial lake outburst floods (GLOFs)  
 - Support downstream applications like risk maps and early-warning systems
-
-This repo includes data, code, and outputs for:
-- Analyzing historical meteorological patterns across Bhutan
-- Identifying seasonal and regional climate trends
-- Supporting predictive modeling of extreme weather events
-
 
 ## Project Roadmap
 
 ### 1. Data Collection
 **Goal:** Fetch and organize relevant data from multiple sources  
-**Status:** In progress
 
 ####  ERA5 Hourly Reanalysis (Main Source)
 - **Variables:**  
@@ -73,7 +61,7 @@ This repo includes data, code, and outputs for:
 - Lagged variables (1, 3, 7, 14, 30 days)
 - Rolling stats (3, 7, 14, 30 days)
 - Temporal features: `dayofyear`, monsoon flag
-- (Optional) Spatial features: elevation, lake/river proximity
+- (Optional) Spatial features: elevation, river and lake metrics 
 
 #### 🧠 Model Development
 - Binary classification (e.g., extreme rainfall event)  
