@@ -9,6 +9,16 @@ This repository is part of [Omdena's local chapter challenge](https://www.omdena
 - Build and validate predictive models to forecast floods and extreme weather events such as glacial lake outburst floods (GLOFs)  
 - Support downstream applications like risk maps and early-warning systems
 
+## 📄 Project Documentation
+
+I created this workflow and presented this to the team to support understanding and communication:
+
+- [docs/bhutan_flood_model_workflow.pdf](docs/bhutan_flood_model_workflow.pdf):  
+  A visual overview of the Bhutan flood risk prediction workflow. It outlines how ERA5 historical data and GraphCast forecasts are used to train and deploy a machine learning model for real-time flood risk assessment, along with a Q&A-style explainer covering common questions about model training, feature selection, proxy labels, GraphCast usage, and more.
+
+These files help both technical and non-technical stakeholders understand our modeling strategy and deployment plan.
+
+
 ## Project Roadmap
 
 ### 1. Data Collection
