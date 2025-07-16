@@ -109,6 +109,7 @@ These files help both technical and non-technical stakeholders understand our mo
 
 - **`code/`** – Python scripts and notebooks for data processing and analysis  
 - **`data/`** – Raw meteorological data files
+- **`docs/`** – Flood prediction ML workflow
 - **`era5_data/`** – Hourly climate variables from ERA5, organized by variable and year
 - **`processed_data/`** – Cleaned and standardized data for each region  
 - **`world_boundaries_for_bhutan_map/`** – Shapefiles and boundary data for mapping  
