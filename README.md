@@ -111,7 +111,7 @@ These files help both technical and non-technical stakeholders understand our mo
 - **`data/`** – Raw meteorological data files
 - **`docs/`** – Flood prediction ML workflow
 - **`era5_data/`** – Hourly climate variables from ERA5, organized by variable and year
-- **`processed_data/`** – Cleaned and standardized data for each region  
+- **`processed_MET_data/`** – Cleaned and standardized MET data for each region  
 - **`world_boundaries_for_bhutan_map/`** – Shapefiles and boundary data for mapping  
 - **`README.md`** – Project overview and instructions  
 
