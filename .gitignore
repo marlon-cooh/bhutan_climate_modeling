@@ -1,3 +1,6 @@
 # Ignore GRIB index files
 *.idx
 
+# Ignore all Parquet files in merged_era5data
+data/merged_era5data/*.parquet
+
